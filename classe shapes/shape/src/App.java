@@ -90,7 +90,7 @@ public class App {
                 x = ttd.tetrahedronArea(lado1);
                 y = ttd.tetrahedronVolumn(lado1);
 
-                System.out.println("O valor da área do triangulo é de " + x + " ou " + (lado1 * lado1) + "√3 e o volume é de " + y);
+                System.out.println("O valor da área do tetraedro é de " + x + " ou " + (lado1 * lado1) + "√3 e o volume é de " + y);
             }
         }
         sc.close();
