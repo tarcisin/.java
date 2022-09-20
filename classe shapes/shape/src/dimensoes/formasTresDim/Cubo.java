@@ -2,6 +2,7 @@ package dimensoes.formasTresDim;
 
 import java.util.Scanner;
 
+import dimensoes.InterfaceShape;
 import dimensoes.TresDimensoes;
 
 public class Cubo extends TresDimensoes
@@ -22,12 +23,12 @@ public class Cubo extends TresDimensoes
     return lining;
   }
 
-  public float cubeArea(float xAxis){
+  public float shapeArea(float xAxis){
     cubeArea = (xAxis * xAxis) * 6;
     return cubeArea;
   }
 
-  public float cubeVolumn(float xAxis){
+  public float shapeVolumn(float xAxis){
     cubeVolumn = (xAxis * xAxis * xAxis);
     return cubeVolumn;
   }

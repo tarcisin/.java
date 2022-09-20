@@ -21,13 +21,19 @@ public class Circulo extends DuasDimensoes
     return pi;
   }
 
-  public float circleArea(float xAxis, float pi){
-    circleArea = (xAxis * xAxis) * pi;
-    return circleArea;
+  public float defineIn(float xAxis){
+    System.out.println("Defina o valor do raio: ");
+    xAxis = sc.nextFloat();
+    return xAxis;
   }
 
-  public float circlePerim(float xAxis, float pi){
+  public float shapePerim(float xAxis, float pi){
     circlePerim = xAxis * 2 * pi;
     return circlePerim;
+  }
+
+  public float shapeArea(float xAxis, float pi) {
+    circleArea = (xAxis * xAxis) * pi;
+    return circleArea;
   }
 }

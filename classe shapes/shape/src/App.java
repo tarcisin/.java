@@ -25,8 +25,8 @@ public class App {
                 float x, y;
 
 
-                x = sqr.squareArea(lado1);
-                y = sqr.squarePerim(lado1);
+                x = sqr.shapeArea(lado1);
+                y = sqr.shapePerim(lado1);
                 System.out.println("O valor da área do quadrado é de " + x + " e o perímetro é de " + y);
             }
             if(formaEnt.equals("triangulo"))
@@ -39,8 +39,8 @@ public class App {
                 float x, y;
 
 
-                x = trg.triangArea(lado1, lado2);
-                y = trg.triangPerim(lado1);
+                x = trg.shapeArea(lado1, lado2);
+                y = trg.shapePerim(lado1);
                 System.out.println("O valor da área do triangulo é de " + x + " e o perímetro é de " + y);
             }
             if(formaEnt.equals("circulo"))
@@ -51,8 +51,8 @@ public class App {
                 Circulo crc = new Circulo("Circulo", 0, 0, z, 0, 0, 0, 0);
                 float x, y = 0;
 
-                x = crc.circleArea(lado1, z);
-                y = crc.circlePerim(lado1, z);
+                x = crc.shapeArea(lado1, z);
+                y = crc.shapeArea(lado1, z);
                 System.out.println("O valor da área do círculo é de " + x + " e o perímetro é de " + y);
             }
         }
@@ -66,8 +66,8 @@ public class App {
                 System.out.println("Qual o valor do raio da esfera? ");
                 lado1 = sc.nextInt();
 
-                x = sph.sphereArea(lado1, pi);
-                y = sph.sphereVolumn(lado1, pi);
+                x = sph.shapeArea(lado1, pi);
+                y = sph.shapeVolumn(lado1, pi);
 
                 System.out.println("O valor da área da esfera é de " + x + " e o volume é de " + y);
             }
@@ -76,8 +76,8 @@ public class App {
                 float x, y;
                 lado1 = cbe.defineLine(lado1);
 
-                x = cbe.cubeArea(lado1);
-                y = cbe.cubeVolumn(lado1);
+                x = cbe.shapeArea(lado1);
+                y = cbe.shapeVolumn(lado1);
 
                 System.out.println("O valor da área do cubo é de " + x + " e o volume é de " + y);
             }
@@ -87,8 +87,8 @@ public class App {
                 System.out.println("Defina o tamanho da aresta do tetraedro: ");
                 lado1 = sc.nextFloat();
 
-                x = ttd.tetrahedronArea(lado1);
-                y = ttd.tetrahedronVolumn(lado1);
+                x = ttd.shapeArea(lado1);
+                y = ttd.shapeVolumn(lado1);
 
                 System.out.println("O valor da área do tetraedro é de " + x + " ou " + (lado1 * lado1) + "√3 e o volume é de " + y);
             }

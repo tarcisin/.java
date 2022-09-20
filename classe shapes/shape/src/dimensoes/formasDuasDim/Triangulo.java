@@ -21,12 +21,12 @@ public class Triangulo extends DuasDimensoes
     return xAxis;
   }
 
-  public float triangArea(float xAxis, float yAxis){
+  public float shapeArea(float xAxis, float yAxis){
     triangArea = (xAxis * yAxis) / 2;
     return triangArea;
   }
 
-  public float triangPerim(float xAxis){
+  public float shapePerim(float xAxis){
     triangPerim = xAxis * 3;
     return triangPerim;
   }

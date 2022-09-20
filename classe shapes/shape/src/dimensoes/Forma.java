@@ -1,6 +1,6 @@
 package dimensoes;
 
-public class Forma {
+public class Forma implements InterfaceShape{
   private String name;
   private int xAxis;
   private int yAxis;
@@ -39,5 +39,30 @@ public class Forma {
   public String toString()
   {
     return "Forma: " + getName() + "\nX: " + getXAxis() + "\nY: " + getYAxis();
+  }
+
+  @Override
+  public float definePi() {
+    return 0;
+  }
+
+  @Override
+  public float shapeArea() {
+    return 0;
+  }
+
+  @Override
+  public float shapeVolumn() {
+    return 0;
+  }
+
+  @Override
+  public float shapePerim() {
+    return 0;
+  }
+
+  @Override
+  public float defineIn() {
+    return 0;
   }
 }

@@ -15,12 +15,12 @@ public class Tetraedro extends TresDimensoes{
 
   Scanner sc = new Scanner(System.in);
 
-  public float tetrahedronArea(float xAxis){
+  public float shapeArea(float xAxis){
     tetrahedronArea = (float) ((xAxis * xAxis) * Math.sqrt(3));
     return tetrahedronArea;
   }
 
-  public float tetrahedronVolumn(float xAxis){
+  public float shapeVolumn(float xAxis){
     tetrahedronVolumn = (float) (((xAxis * xAxis * xAxis) * Math.sqrt(2)) / 12);
     return tetrahedronVolumn;
   }

@@ -21,12 +21,12 @@ public class Esfera extends TresDimensoes
     return pi;
   }
 
-  public float sphereArea(float xAxis, float pi){
+  public float shapeArea(float xAxis, float pi){
     sphereArea = (xAxis * xAxis) * pi * 4;
     return sphereArea;
   }
 
-  public float sphereVolumn(float xAxis, float pi){
+  public float shapeVolumn(float xAxis, float pi){
     sphereVolumn = (xAxis * xAxis * xAxis) * pi * 4/3;
     return sphereVolumn;
   }

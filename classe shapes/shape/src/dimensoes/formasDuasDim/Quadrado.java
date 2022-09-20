@@ -21,12 +21,12 @@ public class Quadrado extends DuasDimensoes
     return xAxis;
   }
 
-  public float squareArea(float xAxis){
+  public float shapeArea(float xAxis){
     squareArea = xAxis * xAxis;
     return squareArea;
   }
 
-  public float squarePerim(float xAxis){
+  public float shapePerim(float xAxis){
     squarePerim = xAxis * 4;
     return squarePerim;
   }
