@@ -8,7 +8,7 @@ public class Banco {
   private float saldo;
   private boolean status;
 
-  public void abrirConta(boolean status, String t){
+  public void abrirConta(String t){
     this.setStatus(true);
     this.setTipoConta(t);
     if(t.equals("CC")){
@@ -59,14 +59,14 @@ public class Banco {
     this.status = status;
   }
 
-  public void fecharConta(boolean status){
+  public void fecharConta(){
     if(this.getSaldo() != 0){
       System.out.println("A conta não pode ser fechada pois o saldo não está zerado!");
     }
     else{
+      this.setStatus(false);
       System.out.println("Conta encerrada com sucesso!");
     }
-    this.setStatus(false);
   }
 
   public void depositar(float valDeposito){
@@ -94,11 +94,20 @@ public class Banco {
     }
   }
 
-  public void pagarMensal(  ){
-    if(this.getStatus() == true){
-      if(this.saldo > 20){
-        this.saldo -= 20;
-      }
-    }  
+  public void pagarMensal(){
+    int v = 0;
+    if(this.getTipoConta().equals("CC")){
+      v = 12;
+    }
+    else if(this.getTipoConta().equals("CP")){
+      v = 20;
+    }
+
+    if(this.getStatus()){
+      this.setSaldo(this.getSaldo() - v);
+    }
+    else{
+      System.out.println("Erro! Conta desativada ou não existente.");
+    }
   }
 }
