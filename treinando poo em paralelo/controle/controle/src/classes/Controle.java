@@ -50,8 +50,8 @@ public class Controle implements InterfaceControle {
     System.out.println("ESTADO: " + this.isLigado());
     System.out.println("REPRODUZINDO MIDIA? " + this.isTocando());
     System.out.println("VOLUME: " + this.getVolume());
-    for(int i = 0; i <= this.getVolume(); i += 10){
-      System.out.println("[]");
+    for(int i = 1; i <= this.getVolume(); i += 10){
+      System.out.print("|");
     }
   }
 
@@ -85,23 +85,44 @@ public class Controle implements InterfaceControle {
 
   @Override
   public void ligarMudo() {
+    if(this.isLigado() && this.getVolume() > 0){
+      this.setVolume(0);  
+    }
+    
+    else{
+      System.err.println("Erro: Aparelho já se encontra mudo ou desligado!");
+    }
     
   }
 
   @Override
   public void desligarMudo() {
+    if(this.isLigado() && this.getVolume() == 0){
+      this.setVolume(50);  
+    }
     
+    else{
+      System.err.println("Erro: Aparelho já se encontra fora do estado mudo ou desligado!");
+    }
   }
 
   @Override
   public void play() {
-    
+    if(this.isLigado() && !this.isTocando()){
+      this.setTocando(true);
+    }
+    else{
+      System.out.println("Erro na reprodução de mídia.");
+    }
   }
 
   @Override
   public void pause() {
-    
+    if(this.isLigado() && this.isTocando()){
+      this.setTocando(false);
+    }
+    else{
+      System.out.println("Erro ao pausar!");
+    }
   }
-  
-  
 }

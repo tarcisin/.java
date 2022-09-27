@@ -1,5 +1,18 @@
+import classes.Controle;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        Controle ctrl = new Controle();
+
+        ctrl.ligar();
+        ctrl.maisVolume();
+        ctrl.abrirMenu();
+        ctrl.ligarMudo();
+        ctrl.pause();
+        ctrl.maisVolume();
+        ctrl.abrirMenu();
+        ctrl.desligar();
+        ctrl.maisVolume();
+
     }
 }
