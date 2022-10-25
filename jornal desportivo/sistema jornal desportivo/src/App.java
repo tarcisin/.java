@@ -1,10 +1,5 @@
-import java.util.List;
-
 import classes.*;
-import classes.Pessoas.Arbitro;
 import classes.Pessoas.Equipe;
-import classes.Pessoas.Jogador;
-import classes.Pessoas.Pessoa;
 import classes.Rodada.Rodada;
 
 public class App {
@@ -31,5 +26,16 @@ public class App {
         Equipe noedo = new Equipe("ODEON", TipoCampeonato.REGIONAL, 0, 0, 0);
         noedo.adicionarTecnico("Edgar CIA.");
         noedo.adicionarJogador("Mosca", "BR", "ZAGA", true);
+
+        Equipe axty = new Equipe("AXTY", TipoCampeonato.REGIONAL, 0, 0, 0);
+        axty.adicionarTecnico("Edgar CIA.");
+        axty.adicionarJogador("Mosca", "BR", "ZAGA", true);
+
+        Rodada novaRod = new Rodada(1, 2022);
+        novaRod.marcarJogo(noedo, axty, "12/12/2022", "FUNDIÇÃO", null);
+        novaRod.jogo.get(0).marcarPontoVisitada();
+        novaRod.jogo.get(0).marcarPontoVisitada();
+        novaRod.jogo.get(0).marcarPontoVisitante();
+        novaRod.jogo.get(0).exibirPlacar();
     }
 }
