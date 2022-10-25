@@ -3,6 +3,8 @@ package classes;
 import java.util.ArrayList;
 import java.util.List;
 
+import classes.Rodada.Rodada;
+
 public class Campeonato {
 
   private int idCamp;

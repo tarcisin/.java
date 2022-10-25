@@ -1,4 +1,4 @@
-package classes;
+package classes.Rodada;
 
 public class Rodada {
   private int numRodada;

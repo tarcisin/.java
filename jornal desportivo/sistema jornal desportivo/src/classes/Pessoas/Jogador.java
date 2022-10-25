@@ -6,8 +6,8 @@ public class Jogador extends Pessoa {
   private boolean titular;
   private int qtdCartao = 0;
 
-  public Jogador(String nome, String funcao, String nacionalidade, String posicao, boolean titular) {
-    super(nome, funcao);
+  public Jogador(String nome, String nacionalidade, String posicao, boolean titular) {
+    super(nome);
     this.nacionalidade = nacionalidade;
     this.posicao = posicao;
     this.titular = titular;
