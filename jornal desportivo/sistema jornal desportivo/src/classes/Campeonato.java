@@ -1,17 +1,23 @@
 package classes;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Campeonato {
 
   private int idCamp;
   private int anoCamp;
   private String nomeCamp;
   private TipoCampeonato tipoC;
+  private List<Rodada> rodadas = new ArrayList<Rodada>();
 
-  public Campeonato(int idCamp, int anoCamp, String nomeCamp, TipoCampeonato tipoC) {
+  
+  public Campeonato(int idCamp, int anoCamp, String nomeCamp, TipoCampeonato tipoC, List<Rodada> rodadas) {
     this.idCamp = idCamp;
     this.anoCamp = anoCamp;
     this.nomeCamp = nomeCamp;
     this.tipoC = tipoC;
+    this.rodadas = rodadas;
   }
   public int getIdCamp() {
     return idCamp;
@@ -37,6 +43,13 @@ public class Campeonato {
   public void setTipoC(TipoCampeonato tipoC) {
     this.tipoC = tipoC;
   }
+  public List<Rodada> getRodadas() {
+    return rodadas;
+  }
+  public void setRodadas(List<Rodada> rodadas) {
+    this.rodadas = rodadas;
+  }
+  
 
   
 }
