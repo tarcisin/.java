@@ -2,14 +2,14 @@ package classes.Pessoas;
 
 public class Jogador extends Pessoa {
   private String nacionalidade;
-  private String posicaoString;
+  private String posicao;
   private boolean titular;
   private int qtdCartao = 0;
 
-  public Jogador(String nome, String nacionalidade, String posicaoString, boolean titular) {
-    super(nome);
+  public Jogador(String nome, String funcao, String nacionalidade, String posicao, boolean titular) {
+    super(nome, funcao);
     this.nacionalidade = nacionalidade;
-    this.posicaoString = posicaoString;
+    this.posicao = posicao;
     this.titular = titular;
   }
 
@@ -21,12 +21,12 @@ public class Jogador extends Pessoa {
     this.nacionalidade = nacionalidade;
   }
 
-  public String getPosicaoString() {
-    return posicaoString;
+  public String getPosicao() {
+    return posicao;
   }
 
-  public void setPosicaoString(String posicaoString) {
-    this.posicaoString = posicaoString;
+  public void setPosicaoString(String posicao) {
+    this.posicao = posicao;
   }
 
   public boolean isTitular() {

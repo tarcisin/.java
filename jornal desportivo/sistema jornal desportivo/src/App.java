@@ -13,7 +13,7 @@ public class App {
         List<Rodada> a = camp.getRodadas();
 
         Arbitro adilson = new Arbitro("Adilson", "Juiz", "tipoDoCamp");
-        Jogador mosca = new Jogador("Lucas Moscardini", "Carioca", "Atacante", false);
+        Jogador mosca = new Jogador("Lucas Moscardini", "Jogador", "Brasileiro", "Atacante", false);
 
         adilson.apitar();
         adilson.aplicarPenalidade(mosca);

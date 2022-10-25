@@ -5,7 +5,7 @@ public class Arbitro extends Pessoa{
   private String cargo;
 
   public Arbitro(String nome, String funcao, String cargo) {
-    super(nome);
+    super(nome, funcao);
     this.cargo = cargo;
   } 
 

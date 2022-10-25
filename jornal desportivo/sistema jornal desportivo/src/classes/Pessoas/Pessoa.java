@@ -5,7 +5,7 @@ public class Pessoa {
   private String nome;
   private String funcao;
 
-  public Pessoa(String nome){
+  public Pessoa(String nome, String funcao){
     this.nome = nome;
     this.funcao = funcao;
     }
