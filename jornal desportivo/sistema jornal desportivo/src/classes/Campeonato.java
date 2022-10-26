@@ -107,16 +107,6 @@ public class Campeonato implements Interface{
 
     
   }
-  @Override
-  public String pesquisarCampeonato() {
-
-    return null;
-  }
-  @Override
-  public String exibirProgr() {
-
-    return null;
-  }
   public List<Equipe> getEquipes() {
     return equipes;
   }

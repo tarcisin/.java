@@ -24,8 +24,8 @@ public class Jogo {
   }
 
   public void exibirEquipes(Equipe equipeVisitante, Equipe equipeVisitada){
-    System.out.println("Equipe visitante  : " + equipeVisitante);
-    System.out.println("Equipe visitada   : " + equipeVisitada);
+    System.out.println("Equipe visitante  : " + equipeVisitante.getNome());
+    System.out.println("Equipe visitada   : " + equipeVisitada.getNome());
   }
 
   public void marcarPontoVisitante(){

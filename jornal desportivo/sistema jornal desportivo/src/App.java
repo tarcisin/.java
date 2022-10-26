@@ -55,16 +55,21 @@ public class App {
         Equipe kingCrimson = new Equipe("Rei Carmesim", 0, 0, 0);
         Equipe rush = new Equipe("Correria", 0, 0, 0);
 
-        Equipe odeon = new Equipe("Noedo", 0, 0, 0);
-        Equipe axty = new Equipe("Ansiedade", 0, 0, 0);
-        Equipe vitalism = new Equipe("Vitalismo", 0, 0, 0);
-        Equipe intervals = new Equipe("Intervalos", 0, 0, 0);
-        Equipe feedMeJack = new Equipe("Me alimente, Jack", 0, 0, 0);
-        Equipe emmercia = new Equipe("Immerço", 0, 0, 0);
-        Equipe unprocessed = new Equipe("Não Processado", 0, 0, 0);
-        Equipe violetSoda = new Equipe("Refrigerante Violeta", 0, 0, 0);
-        Equipe badLuv = new Equipe("Amor Ruim", 0, 0, 0);
-        Equipe bulletBane = new Equipe("Ruína de bala", 0, 0, 0);
+        camp.adicionarEquipe("Noedo", 0, 0, 0);
+        camp.adicionarEquipe("Ansiedade", 0, 0, 0);
+        camp.adicionarEquipe("Vitalismo", 0, 0, 0);
+        camp.adicionarEquipe("Intervalos", 0, 0, 0);
+        camp.adicionarEquipe("Me alimente, Jack", 0, 0, 0);
+        camp.adicionarEquipe("Immerço", 0, 0, 0);
+        camp.adicionarEquipe("Não Processado", 0, 0, 0);
+        camp.adicionarEquipe("Refrigerante Violeta", 0, 0, 0);
+        camp.adicionarEquipe("Amor Ruim", 0, 0, 0);
+        camp.adicionarEquipe("Ruína de bala", 0, 0, 0);
+
+        camp.getEquipes().get(0).adicionarTecnico("Rogério Águas");
+        camp.getEquipes().get(1).adicionarTecnico("Peter Grant");
+        camp.getEquipes().get(6).adicionarTecnico("Brian Epstein");
+        camp.getEquipes().get(8).adicionarTecnico("Ed. Garcia");
 
         camp.adicionarRodadas(1, 1969);
         camp.adicionarRodadas(2, 1986);
@@ -81,15 +86,18 @@ public class App {
         camp.getRodadas().get(1).marcarJogo(dreamTheater, rush, "07/09/1972", "Madison Square Garden", camp.getArbtr().get(0));
         camp.getRodadas().get(1).marcarJogo(dreamTheater, camp.getEquipes().get(0), "esse não tem nem possibilidade", "Madison Square Garden", camp.getArbtr().get(1));
 
-        camp.getRodadas().get(2).marcarJogo(odeon, axty, "11/04/2022", "Hangar 110", camp.getArbtr().get(1));
-        camp.getRodadas().get(2).marcarJogo(axty, bulletBane, "16/06/2022", "Circo Voador", camp.getArbtr().get(1));
-        camp.getRodadas().get(2).marcarJogo(intervals, feedMeJack, "26/05/2014", "Circo Voador", camp.getArbtr().get(1));
-        camp.getRodadas().get(2).marcarJogo(intervals, vitalism, "29/07/2019", "Circo Voador", camp.getArbtr().get(0));
+        camp.getRodadas().get(2).marcarJogo(camp.getEquipes().get(7), camp.getEquipes().get(8), "11/04/2022", "Hangar 110", camp.getArbtr().get(1));
+        camp.getRodadas().get(2).marcarJogo(camp.getEquipes().get(8), camp.getEquipes().get(16), "16/06/2022", "Circo Voador", camp.getArbtr().get(1));
+        camp.getRodadas().get(2).marcarJogo(camp.getEquipes().get(10), camp.getEquipes().get(11), "26/05/2014", "Circo Voador", camp.getArbtr().get(1));
+        camp.getRodadas().get(2).marcarJogo(camp.getEquipes().get(9), camp.getEquipes().get(14), "29/07/2019", "Circo Voador", camp.getArbtr().get(0));
         
-        camp.getRodadas().get(3).marcarJogo(emmercia, bulletBane, "19/07/2021", "Fabrique Club", camp.getArbtr().get(1));
-        camp.getRodadas().get(3).marcarJogo(violetSoda, badLuv, "18/06/2021", "VK Club", camp.getArbtr().get(1));
-        camp.getRodadas().get(3).marcarJogo(unprocessed, vitalism, "08/06/2019", "Algum lugar em Tel Aviv", camp.getArbtr().get(1));
-        camp.getRodadas().get(3).marcarJogo(odeon, vitalism, "nem chance", "Fundição Progresso", camp.getArbtr().get(0));
+        camp.getRodadas().get(3).marcarJogo(camp.getEquipes().get(12), camp.getEquipes().get(16), "19/07/2021", "Fabrique Club", camp.getArbtr().get(1));
+        camp.getRodadas().get(3).marcarJogo(camp.getEquipes().get(15), camp.getEquipes().get(14), "18/06/2021", "VK Club", camp.getArbtr().get(1));
+        camp.getRodadas().get(3).marcarJogo(camp.getEquipes().get(15), camp.getEquipes().get(13), "08/06/2019", "Algum lugar em Tel Aviv", camp.getArbtr().get(1));
+        camp.getRodadas().get(3).marcarJogo(camp.getEquipes().get(8), camp.getEquipes().get(11), "nem chance", "Fundição Progresso", camp.getArbtr().get(0));
+
+        camp.getRodadas().get(0).jogo.get(0).exibirEquipes(kingCrimson, rush);
+        camp.getRodadas().get(3).jogo.get(0).exibirEquipes(camp.getEquipes().get(7), camp.getEquipes().get(8));
 
         camp.getEquipes().get(0).adicionarJogador("Roger Waters", "Inglês", "Zaga", true);
         camp.getEquipes().get(0).adicionarJogador("David Gilmour", "Inglês", "Ataque", true);
@@ -139,17 +147,21 @@ public class App {
         camp.getRodadas().get(0).jogo.get(0).marcarPontoVisitada();
         camp.getRodadas().get(0).jogo.get(0).marcarPontoVisitada();
         camp.getRodadas().get(0).jogo.get(0).marcarPontoVisitante();
+        camp.getRodadas().get(0).jogo.get(0).exibirPlacar();
 
         camp.getRodadas().get(0).jogo.get(1).marcarPontoVisitante();
         camp.getRodadas().get(0).jogo.get(1).marcarPontoVisitada();
         camp.getRodadas().get(0).jogo.get(1).marcarPontoVisitante();
         camp.getRodadas().get(0).jogo.get(1).marcarPontoVisitante();
+        camp.getRodadas().get(0).jogo.get(1).exibirPlacar();
 
         camp.getRodadas().get(0).jogo.get(2).marcarPontoVisitante();
         camp.getRodadas().get(0).jogo.get(2).marcarPontoVisitante();
+        camp.getRodadas().get(0).jogo.get(2).exibirPlacar();
 
         camp.getRodadas().get(0).jogo.get(3).marcarPontoVisitada();
         camp.getRodadas().get(0).jogo.get(3).marcarPontoVisitante();
+        camp.getRodadas().get(0).jogo.get(3).exibirPlacar();
 
 
 
@@ -158,6 +170,7 @@ public class App {
         camp.getRodadas().get(1).jogo.get(0).marcarPontoVisitante();
         camp.getRodadas().get(1).jogo.get(0).marcarPontoVisitante();
         camp.getRodadas().get(1).jogo.get(0).marcarPontoVisitante();
+        camp.getRodadas().get(1).jogo.get(0).exibirPlacar();
 
         camp.getRodadas().get(1).jogo.get(1).marcarPontoVisitante();
         camp.getRodadas().get(1).jogo.get(1).marcarPontoVisitante();
@@ -165,29 +178,39 @@ public class App {
         camp.getRodadas().get(1).jogo.get(1).marcarPontoVisitante();
         camp.getRodadas().get(1).jogo.get(1).marcarPontoVisitada();
         camp.getRodadas().get(1).jogo.get(1).marcarPontoVisitante();
+        camp.getRodadas().get(1).jogo.get(1).exibirPlacar();
+
 
         camp.getRodadas().get(1).jogo.get(2).marcarPontoVisitada();
         camp.getRodadas().get(1).jogo.get(2).marcarPontoVisitante();
         camp.getRodadas().get(1).jogo.get(2).marcarPontoVisitante();
         camp.getRodadas().get(1).jogo.get(2).marcarPontoVisitada();
         camp.getRodadas().get(1).jogo.get(2).marcarPontoVisitante();
+        camp.getRodadas().get(1).jogo.get(2).exibirPlacar();
+
 
         camp.getRodadas().get(1).jogo.get(3).marcarPontoVisitante();
         camp.getRodadas().get(1).jogo.get(3).marcarPontoVisitante();
         camp.getRodadas().get(1).jogo.get(3).marcarPontoVisitada();
         camp.getRodadas().get(1).jogo.get(3).marcarPontoVisitante();
         camp.getRodadas().get(1).jogo.get(3).marcarPontoVisitada();
+        camp.getRodadas().get(1).jogo.get(3).exibirPlacar();
+
 
 
 
         camp.getRodadas().get(2).jogo.get(0).marcarPontoVisitante();
         camp.getRodadas().get(2).jogo.get(0).marcarPontoVisitante();
+        camp.getRodadas().get(2).jogo.get(0).exibirPlacar();
+
 
         camp.getRodadas().get(2).jogo.get(1).marcarPontoVisitada();
         camp.getRodadas().get(2).jogo.get(1).marcarPontoVisitante();
+        camp.getRodadas().get(2).jogo.get(1).exibirPlacar();
 
         camp.getRodadas().get(2).jogo.get(2).marcarPontoVisitada();
         camp.getRodadas().get(2).jogo.get(2).marcarPontoVisitada();
+        camp.getRodadas().get(2).jogo.get(2).exibirPlacar();
 
         camp.getRodadas().get(2).jogo.get(3).marcarPontoVisitante();
         camp.getRodadas().get(2).jogo.get(3).marcarPontoVisitante();
@@ -195,22 +218,66 @@ public class App {
         camp.getRodadas().get(2).jogo.get(1).marcarPontoVisitante();
         camp.getRodadas().get(2).jogo.get(2).marcarPontoVisitada();
         camp.getRodadas().get(2).jogo.get(2).marcarPontoVisitada();
+        camp.getRodadas().get(2).jogo.get(2).exibirPlacar();
 
 
 
         camp.getRodadas().get(3).jogo.get(0).marcarPontoVisitante();
         camp.getRodadas().get(3).jogo.get(0).marcarPontoVisitante();
         camp.getRodadas().get(3).jogo.get(0).marcarPontoVisitada();
+        camp.getRodadas().get(3).jogo.get(0).exibirPlacar();
 
         camp.getRodadas().get(3).jogo.get(1).marcarPontoVisitante();
         camp.getRodadas().get(3).jogo.get(1).marcarPontoVisitada();
+        camp.getRodadas().get(3).jogo.get(1).exibirPlacar();
 
         camp.getRodadas().get(3).jogo.get(2).marcarPontoVisitada();
+        camp.getRodadas().get(3).jogo.get(2).exibirPlacar();
 
         camp.getRodadas().get(3).jogo.get(3).marcarPontoVisitada();
         camp.getRodadas().get(3).jogo.get(3).marcarPontoVisitante();
+        camp.getRodadas().get(3).jogo.get(3).exibirPlacar();
 
 
+        System.out.println(tool.jogadores.get(1).isTitular());
+
+        camp.getArbtr().get(0).aplicarPenalidade(tool.jogadores.get(1));
+        camp.getArbtr().get(0).apitar();
+        camp.getArbtr().get(0).aplicarPenalidade(tool.jogadores.get(1));
+        camp.getArbtr().get(0).aplicarPenalidade(tool.jogadores.get(1));
+
+
+        System.out.println(tool.jogadores.get(1).isTitular());
+
+        camp.consultarRod(1);
+        camp.consultarRod(2);
+        camp.consultarRod(3);
+        camp.consultarRod(4);
+
+
+
+        camp.getRodadas().get(0).jogo.get(0).coletarResultado();
+        camp.getRodadas().get(0).jogo.get(1).coletarResultado();
+        camp.getRodadas().get(0).jogo.get(2).coletarResultado();
+        camp.getRodadas().get(0).jogo.get(3).coletarResultado();
+
+        camp.getRodadas().get(1).jogo.get(0).coletarResultado();
+        camp.getRodadas().get(1).jogo.get(1).coletarResultado();
+        camp.getRodadas().get(1).jogo.get(2).coletarResultado();
+        camp.getRodadas().get(1).jogo.get(3).coletarResultado();
+
+        camp.getRodadas().get(2).jogo.get(0).coletarResultado();
+        camp.getRodadas().get(2).jogo.get(1).coletarResultado();
+        camp.getRodadas().get(2).jogo.get(2).coletarResultado();
+        camp.getRodadas().get(2).jogo.get(3).coletarResultado();
+
+        camp.getRodadas().get(3).jogo.get(0).coletarResultado();
+        camp.getRodadas().get(3).jogo.get(1).coletarResultado();
+        camp.getRodadas().get(3).jogo.get(2).coletarResultado();
+        camp.getRodadas().get(3).jogo.get(3).coletarResultado();
+
+        camp.exibirClassif();
+        
         
 
         

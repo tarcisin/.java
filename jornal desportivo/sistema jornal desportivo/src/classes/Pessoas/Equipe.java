@@ -13,7 +13,7 @@ public class Equipe {
   private int vitorias;
   private int derrotas;
   private Tecnico tecnico;
-  List<Jogador> jogadores = new ArrayList<>();
+  public List<Jogador> jogadores = new ArrayList<>();
 
   public Equipe(String nome, int qtdPontos, int vitorias, int derrotas) {
     this.nome = nome;
