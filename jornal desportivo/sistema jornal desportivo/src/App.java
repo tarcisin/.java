@@ -21,7 +21,6 @@ public class App {
         
         Equipe manchester = new Equipe("Manchester City", TipoCampeonato.PRIMEIRA_DIVISAO, 0, 2, 3);
         manchester.adicionarTecnico("robinho");
-        */
 
         Equipe noedo = new Equipe("ODEON", TipoCampeonato.REGIONAL, 0, 0, 0);
         noedo.adicionarTecnico("Edgar CIA.");
@@ -36,6 +35,7 @@ public class App {
         novaRod.jogo.get(0).marcarPontoVisitada();
         novaRod.jogo.get(0).marcarPontoVisitada();
         novaRod.jogo.get(0).marcarPontoVisitante();
-        novaRod.jogo.get(0).exibirPlacar();
+        novaRod.jogo.get(0).coletarResultado();
+        */
     }
 }

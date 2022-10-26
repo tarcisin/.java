@@ -3,15 +3,19 @@ package classes;
 import java.util.ArrayList;
 import java.util.List;
 
+import classes.Pessoas.Arbitro;
+import classes.Pessoas.Equipe;
 import classes.Rodada.Rodada;
 
-public class Campeonato {
+public class Campeonato implements Interface{
 
   private int idCamp;
   private int anoCamp;
   private String nomeCamp;
   private TipoCampeonato tipoC;
   private List<Rodada> rodadas = new ArrayList<Rodada>();
+  private List<Equipe> equipes = new ArrayList<Equipe>();
+  List<Arbitro> arbtr = new ArrayList<>();
 
   
   public Campeonato(int idCamp, int anoCamp, String nomeCamp, TipoCampeonato tipoC, List<Rodada> rodadas) {
@@ -52,6 +56,66 @@ public class Campeonato {
     this.rodadas = rodadas;
   }
   
+  public void adicionarEquipe(String nome, TipoCampeonato divisao, int qtdPontos, int vitorias, int derrotas){
+    Equipe eqp = new Equipe(nome, divisao, qtdPontos, vitorias, derrotas);
+    equipes.add(eqp);
+  }
+
+  public void adicionarRodadas(int numRodada, int anoRodada){
+    Rodada rodada = new Rodada(numRodada, anoRodada);
+    rodadas.add(rodada);
+  }
+
+  public void adicionarArbitro(String nome, String cargo){
+    Arbitro arb = new Arbitro(nome, cargo);
+    arbtr.add(arb);
+  }
+
+  public void consultarRod(int numRodada){
+    int temp = 0;
+    for(int j = 0; j < rodadas.size(); j++){
+      if(rodadas.get(j).getNumRodada() == numRodada){
+        System.out.println("\nAno: " + rodadas.get(j).getAnoRodada());
+        System.out.println("Número de Identificação: " + rodadas.get(j).getNumRodada());
+        System.out.println("Número de Jogos: " + rodadas.get(0).jogo.size() + "\n");
+        temp = j;
+      }
+    }
+    for(int i = 0; i < rodadas.get(temp).jogo.size(); i ++){
+      System.out.println("\n -=-=-=-=" + (i + 1) + "=-=-=-=-");
+      System.out.println("Data: " + rodadas.get(temp).jogo.get(i).getData());
+      System.out.println("Local: " + rodadas.get(temp).jogo.get(i).getLocal());
+      System.out.println("Árbitro: " + rodadas.get(temp).jogo.get(i).getArbitro().getNome());
+      System.out.println("Visitante: " + rodadas.get(temp).jogo.get(i).getVisitante().getNome());
+      System.out.println("Visitado: " + rodadas.get(temp).jogo.get(i).getVisitado().getNome());
+    }
+  }
+
+  @Override
+  public void exibirClassif(){
+    List<String> classif = new ArrayList<String>();
+    String temp = new String();
+    for(int i = 0; i < equipes.size(); i++){
+      temp = equipes.get(i).getQtdPontos() + " :: " + equipes.get(i).getNome();
+      classif.add(temp);
+    }
+    System.out.println("\n\nClassificação:\n");
+    for(int i = 0; i < classif.size(); i++){
+      System.out.println(classif.get(i));
+    }
+
+    
+  }
+  @Override
+  public String pesquisarCampeonato() {
+
+    return null;
+  }
+  @Override
+  public String exibirProgr() {
+
+    return null;
+  }
 
   
 }

@@ -6,8 +6,6 @@ public class Tecnico extends Pessoa{
     super(nome);
   }
 
-  
-
   public void elaborarTatica(){
     System.out.println("Tô pensando, to pensando, tô pesando...");
   }
