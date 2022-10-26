@@ -1,8 +1,5 @@
 package classes.Jogo;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import classes.Pessoas.Arbitro;
 import classes.Pessoas.Equipe;
 

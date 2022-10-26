@@ -15,9 +15,8 @@ public class Equipe {
   private Tecnico tecnico;
   List<Jogador> jogadores = new ArrayList<>();
 
-  public Equipe(String nome, TipoCampeonato divisao, int qtdPontos, int vitorias, int derrotas) {
+  public Equipe(String nome, int qtdPontos, int vitorias, int derrotas) {
     this.nome = nome;
-    this.divisao = divisao;
     this.qtdPontos = qtdPontos;
     this.vitorias = vitorias;
     this.derrotas = derrotas;

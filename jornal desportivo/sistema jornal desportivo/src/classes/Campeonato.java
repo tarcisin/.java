@@ -1,6 +1,7 @@
 package classes;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import classes.Pessoas.Arbitro;
@@ -18,12 +19,11 @@ public class Campeonato implements Interface{
   List<Arbitro> arbtr = new ArrayList<>();
 
   
-  public Campeonato(int idCamp, int anoCamp, String nomeCamp, TipoCampeonato tipoC, List<Rodada> rodadas) {
+  public Campeonato(int idCamp, int anoCamp, String nomeCamp, TipoCampeonato tipoC) {
     this.idCamp = idCamp;
     this.anoCamp = anoCamp;
     this.nomeCamp = nomeCamp;
     this.tipoC = tipoC;
-    this.rodadas = rodadas;
   }
   public int getIdCamp() {
     return idCamp;
@@ -56,8 +56,8 @@ public class Campeonato implements Interface{
     this.rodadas = rodadas;
   }
   
-  public void adicionarEquipe(String nome, TipoCampeonato divisao, int qtdPontos, int vitorias, int derrotas){
-    Equipe eqp = new Equipe(nome, divisao, qtdPontos, vitorias, derrotas);
+  public void adicionarEquipe(String nome, int qtdPontos, int vitorias, int derrotas){
+    Equipe eqp = new Equipe(nome, qtdPontos, vitorias, derrotas);
     equipes.add(eqp);
   }
 
@@ -93,12 +93,13 @@ public class Campeonato implements Interface{
 
   @Override
   public void exibirClassif(){
-    List<String> classif = new ArrayList<String>();
+    List<String> classif = new ArrayList<>();
     String temp = new String();
     for(int i = 0; i < equipes.size(); i++){
       temp = equipes.get(i).getQtdPontos() + " :: " + equipes.get(i).getNome();
       classif.add(temp);
     }
+    Collections.sort(classif); 
     System.out.println("\n\nClassificação:\n");
     for(int i = 0; i < classif.size(); i++){
       System.out.println(classif.get(i));
@@ -115,6 +116,18 @@ public class Campeonato implements Interface{
   public String exibirProgr() {
 
     return null;
+  }
+  public List<Equipe> getEquipes() {
+    return equipes;
+  }
+  public void setEquipes(List<Equipe> equipes) {
+    this.equipes = equipes;
+  }
+  public List<Arbitro> getArbtr() {
+    return arbtr;
+  }
+  public void setArbtr(List<Arbitro> arbtr) {
+    this.arbtr = arbtr;
   }
 
   
