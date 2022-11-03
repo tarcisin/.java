@@ -99,7 +99,7 @@ public class Campeonato implements Interface{
       temp = equipes.get(i).getQtdPontos() + " :: " + equipes.get(i).getNome();
       classif.add(temp);
     }
-    Collections.sort(classif); 
+    Collections.sort(classif, Collections.reverseOrder()); 
     System.out.println("\n\nClassificação:\n");
     for(int i = 0; i < classif.size(); i++){
       System.out.println(classif.get(i));
