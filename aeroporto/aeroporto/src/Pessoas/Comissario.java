@@ -7,6 +7,14 @@ public class Comissario extends Pessoa{
   private int acessFlights;
   private String cargo;
 
+  public Comissario(String name, String nasc, String cpf, int id, int flightHours, int acessFlights, String cargo) {
+    super(name, nasc, cpf);
+    this.id = id;
+    this.flightHours = flightHours;
+    this.acessFlights = acessFlights;
+    this.cargo = "Comissário de bordo";
+  }
+
   public int getId() {
     return id;
   }

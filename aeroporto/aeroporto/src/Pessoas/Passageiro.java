@@ -4,27 +4,30 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
-
-import javax.print.event.PrintEvent;
-
 import Aeronave.Assentos;
 
 public class Passageiro extends Pessoa {
 
   private String seat;
-  private TipoServico serviceType;
+  private String serviceType;
   private boolean embarked;
-  
+
+  public Passageiro(String name, String nasc, String cpf, String serviceType, boolean embarked) {
+    super(name, nasc, cpf);
+    this.serviceType = serviceType;
+    this.embarked = false;
+  }
+
   public String getSeat() {
     return seat;
   }
   public void setSeat(String seat) {
     this.seat = seat;
   }
-  public TipoServico getServiceType() {
+  public String getServiceType() {
     return serviceType;
   }
-  public void setServiceType(TipoServico serviceType) {
+  public void setServiceType(String serviceType) {
     this.serviceType = serviceType;
   }
   public boolean isEmbarked() {
@@ -46,6 +49,7 @@ public class Passageiro extends Pessoa {
     System.out.println("Qual assento deseja selecionar? ");
     selected = sc.next();
     toReserveSeat(selected, seats);
+    sc.close();
   }
 
   public void toReserveSeat(String idSeat, ArrayList<Assentos> seats){
@@ -58,8 +62,13 @@ public class Passageiro extends Pessoa {
     } else {
         reserved.get(idSeat).setOccupied(true);
     }
-}
-  
+  }
 
-  
+  public void toEmbark(){
+    this.setEmbarked(true);
+  }
+
+  public String pray(){
+    return "\nPai nosso...";
+  } 
 }

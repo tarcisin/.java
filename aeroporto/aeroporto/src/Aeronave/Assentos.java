@@ -5,6 +5,11 @@ public class Assentos {
   private String id;
   private boolean occupied;
   
+  public Assentos(String id, boolean occupied) {
+    this.id = id;
+    this.occupied = occupied;
+  }
+  
   public String getId() {
     return id;
   }
