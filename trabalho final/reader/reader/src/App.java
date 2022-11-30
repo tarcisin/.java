@@ -5,7 +5,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         int b;
         String a = File.Read("DoNotGoGentleIntoThatGoodNight.txt");
-        b = Analyzer.stringCounter(a, "os");
+        b = Analyzer.stringCounterDif(a, "os");
         System.out.println(b);
     }
 }
