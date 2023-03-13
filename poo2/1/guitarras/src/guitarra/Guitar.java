@@ -114,7 +114,7 @@ public class Guitar {
 
   @Override
   public String toString() {
-    return "Guitar [id=" + id + ", brand=" + brand + ", model=" + model + ", strings=" + strings + ", wood=" + wood
+    return "Guitar [ id=" + id + ", brand=" + brand + ", model=" + model + ", strings=" + strings + ", wood=" + wood
         + ", knobs=" + knobs + ", pickups=" + pickups + ", head=" + head + ", acoustic=" + acoustic + ", bridge="
         + bridge + ", color=" + color + ", neck=" + neck + ", scales=" + scales + "]";
   }
