@@ -1,4 +1,4 @@
-import InstrumentosDeCorda.*;
+import InstrumentosDeCorda.AcousticFactory;
 
 
 public class App {
