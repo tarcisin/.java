@@ -1,6 +1,6 @@
 package InstrumentosDeCorda;
 
-public interface String {
+public interface Strings {
   
   public void play();
   public void tune();

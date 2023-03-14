@@ -1,6 +1,6 @@
 package InstrumentosDeCorda;
 
-public class Bass implements String{
+public class Bass implements Strings{
 
   private int strings;
   private String pickups;

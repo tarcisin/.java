@@ -1,6 +1,6 @@
 package InstrumentosDeCorda;
 
-public class Acoustic implements String{
+public class Acoustic implements Strings{
 
   private int strings;
   private String pickups;

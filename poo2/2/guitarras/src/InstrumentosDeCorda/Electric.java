@@ -1,6 +1,6 @@
 package InstrumentosDeCorda;
 
-public class Electric implements String{
+public class Electric implements Strings{
 
   private int strings;
   private String pickups;
