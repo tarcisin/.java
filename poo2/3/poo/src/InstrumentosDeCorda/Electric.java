@@ -1,5 +1,7 @@
 package InstrumentosDeCorda;
 
+import java.util.Scanner;
+
 public class Electric implements Strings{
 
   private int strings;
@@ -9,17 +11,32 @@ public class Electric implements Strings{
 
   @Override
   public void play() {
-    System.out.println("Plays 'Comfortably Numb', by Pink Floyd");
+    System.out.println("Insert a song to be played on the electric guitar:");
+    String song;
+    Scanner sc = new Scanner(System.in);
+    song = sc.nextLine();
+    System.out.println("Plays " + song);
+    sc.close();
   }
 
   @Override
   public void tune() {
-    System.out.println("Tune in standart tuning;");
+    System.out.println("Insert a tuning to be tuned on the electric guitar:");
+    String tune;
+    Scanner sc = new Scanner(System.in);
+    tune = sc.nextLine();
+    System.out.println("The current tuning is " + tune);
+    sc.close();
   }
 
   @Override
   public void switchStrings() {
-    System.out.println("Change the current strings by new ones;");
+    System.out.println("Insert the strings that will be switched on the electric guitar: ");
+    String newStrings;
+    Scanner sc = new Scanner(System.in);
+    newStrings = sc.nextLine();
+    System.out.println("The new strings on the electric guitar are: " + newStrings);
+    sc.close();
   }
 
   public int getStrings() {

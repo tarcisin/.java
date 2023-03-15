@@ -1,5 +1,7 @@
 package InstrumentosDeCorda;
 
+import java.util.Scanner;
+
 public class Bass implements Strings{
 
   private int strings;
@@ -9,19 +11,34 @@ public class Bass implements Strings{
 
   @Override
   public void play() {
-    System.out.println("Plays 'Money', by Pink Floyd");
+    System.out.println("Insert a song to be played on the bass:");
+    String song;
+    Scanner sc = new Scanner(System.in);
+    song = sc.nextLine();
+    System.out.println("Plays " + song);
+    sc.close();
   }
 
   @Override
   public void tune() {
-    System.out.println("Tune in standart tuning, but a octave lower;");
+    System.out.println("Insert a tuning to be tuned on the bass:");
+    String tune;
+    Scanner sc = new Scanner(System.in);
+    tune = sc.nextLine();
+    System.out.println("The current tuning is " + tune);
+    sc.close();
   }
 
   @Override
   public void switchStrings() {
-    System.out.println("Change the current strings by new ones with extreme effort;");
+    System.out.println("Insert the strings that will be switched on the bass: ");
+    String newStrings;
+    Scanner sc = new Scanner(System.in);
+    newStrings = sc.nextLine();
+    System.out.println("The new strings on the bass are: " + newStrings);
+    sc.close();
   }
-
+  
   public int getStrings() {
     return strings;
   }
