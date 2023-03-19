@@ -26,22 +26,32 @@ public class Time implements Pessoa{
   public void setNome(String nome) {
     this.nome = nome;
   }
+
+  public List<Pessoa> getPessoas() {
+    return pessoas;
+  }
+  public void setPessoas(List<Pessoa> pessoas) {
+    this.pessoas = pessoas;
+  }
+  public String getCurriculos() {
+    return curriculos;
+  }
+  public void setCurriculos(String curriculos) {
+    this.curriculos = curriculos;
+  }
+
 @Override
-  public String obterNomes(){
-    String nomes = "";
+  public void imprimirNomes(){
     for (Pessoa pessoa : pessoas) {
-      pessoa.obterNomes();
-      nomes += pessoa.obterNomes();
+      pessoa.imprimirNomes();
     }
-    return nomes;
   }
   
   @Override
-  public String obterCurriculo() {
+  public void imprimirCurriculos() {
     for (Pessoa pessoa : pessoas) {
-      curriculos += pessoa.obterCurriculo();
-      curriculos += "\n";
+      pessoa.imprimirCurriculos();
+
     }
-    return curriculos;
   }
 }

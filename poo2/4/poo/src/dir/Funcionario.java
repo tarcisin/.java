@@ -58,15 +58,14 @@ public class Funcionario implements Pessoa{
   }
 
   @Override
-  public String obterNomes(){
+  public void imprimirNomes(){
     System.out.println(nome);
-    return nome;
   }
 
 
   @Override
-  public String obterCurriculo() {
-    return getCurriculo();
+  public void imprimirCurriculos() {
+    System.out.println(curriculo);
   }
 
 }

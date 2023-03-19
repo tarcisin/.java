@@ -1,7 +1,7 @@
 package dir;
 
 public interface Pessoa {
-  public String obterNomes();
-  public String obterCurriculo();
+  public void imprimirNomes();
+  public void imprimirCurriculos();
 
 }
