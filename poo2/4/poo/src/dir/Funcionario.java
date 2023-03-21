@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class Funcionario implements Pessoa{
 
   private String nome;
-  private String curriculo;
   private String cargo;
 
 
-  public Funcionario(String nome) {
+  public Funcionario(String nome, String cargo) {
     this.nome = nome;
+    this.cargo = cargo;
   }
 
 
@@ -22,12 +22,6 @@ public class Funcionario implements Pessoa{
   public void setNome(String nome) {
     this.nome = nome;
   }
-  public String getCurriculo() {
-    return curriculo;
-  }
-  public void setCurriculo(String curriculo) {
-    this.curriculo = curriculo;
-  }
   public String getCargo() {
     return cargo;
   }
@@ -35,37 +29,9 @@ public class Funcionario implements Pessoa{
     this.cargo = cargo;
   }
 
-  public void adicionarCurriculo(){
-    String probe = "";
-    System.out.println("-----------------// Currículo // ------------------");
-    System.out.println("Insira o nome:");
-    probe = sc.next();
-    curriculo += probe;
-    nome = probe;
-    probe = "";
-    System.out.println("Ano de nascimento:");
-    probe = sc.next();
-    curriculo += probe;
-    probe = "";
-    System.out.println("Formações:");
-    probe = sc.next();
-    curriculo += probe;
-    probe = "";
-    System.out.println("Experiências profissionais:");
-    probe = sc.next();
-    curriculo += probe;
-    probe = "";
-  }
-
   @Override
   public void imprimirNomes(){
-    System.out.println(nome);
-  }
-
-
-  @Override
-  public void imprimirCurriculos() {
-    System.out.println(curriculo);
+    System.out.println(nome + ": " + cargo);
   }
 
 }

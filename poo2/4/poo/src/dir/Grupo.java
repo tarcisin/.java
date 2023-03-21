@@ -3,13 +3,12 @@ package dir;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Time implements Pessoa{
+public class Grupo implements Pessoa{
 
   private String nome;
   private List<Pessoa> pessoas = new ArrayList<>();
-  private String curriculos;
 
-  public Time(String nome, List<Pessoa> pessoas) {
+  public Grupo(String nome, List<Pessoa> pessoas) {
     this.nome = nome;
     this.pessoas = pessoas;
   }
@@ -33,25 +32,14 @@ public class Time implements Pessoa{
   public void setPessoas(List<Pessoa> pessoas) {
     this.pessoas = pessoas;
   }
-  public String getCurriculos() {
-    return curriculos;
-  }
-  public void setCurriculos(String curriculos) {
-    this.curriculos = curriculos;
-  }
+
 
 @Override
   public void imprimirNomes(){
+    System.out.println(nome + ":");
     for (Pessoa pessoa : pessoas) {
       pessoa.imprimirNomes();
     }
   }
   
-  @Override
-  public void imprimirCurriculos() {
-    for (Pessoa pessoa : pessoas) {
-      pessoa.imprimirCurriculos();
-
-    }
-  }
 }
