@@ -1,7 +1,4 @@
 package dir;
-
-import java.util.Scanner;
-
 public class Funcionario implements Pessoa{
 
   private String nome;
@@ -12,9 +9,6 @@ public class Funcionario implements Pessoa{
     this.nome = nome;
     this.cargo = cargo;
   }
-
-
-  Scanner sc = new Scanner(System.in);
 
   public String getNome() {
     return nome;
